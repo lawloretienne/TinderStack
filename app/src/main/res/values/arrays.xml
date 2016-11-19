@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="display_names">
+        <item>Megan Fox</item>
+        <item>Olivia Wilde</item>
+        <item>Jennifer Lawrence</item>
+        <item>Jessica Alba</item>
+        <item>Leighton Meester</item>
+        <item>Hayden Panettiere</item>
+        <item>Ashley Tisdale</item>
+        <item>Aida Yespica</item>
+        <item>Adriana Lima</item>
+        <item>Alessandra Ambrosio</item>
+        <item>Candice Swanepoel</item>
+        <item>Jessica Gomes</item>
+        <item>Genevieve Morton</item>
+        <item>Petra Nemcova</item>
+        <item>Lily Aldridge</item>
+        <item>Kate Upton</item>
+        <item>Gigi Hadid</item>
+        <item>Michelle Keegan</item>
+        <item>Katherine Webb</item>
+        <item>Scarlett Johansson</item>
+        <item>Katharine McPhee</item>
+        <item>Lucy Pinder</item>
+        <item>Miranda Kerr</item>
+    </array>
+
+    <array name="usernames">
+        <item>\@meganfox</item>
+        <item>\@oliviawilde</item>
+        <item>\@Jennifer_Lawrence</item>
+        <item>\@jessicaalba</item>
+        <item>\@itsmeleighton</item>
+        <item>\@haydenpanettier</item>
+        <item>\@ashleytisdale</item>
+        <item>\@AidaYespica</item>
+        <item>\@AdrianaLima</item>
+        <item>\@AngelAlessandra</item>
+        <item>\@angelcandice</item>
+        <item>\@iamjessicagomes</item>
+        <item>\@genevievemorton</item>
+        <item>\@pnemcova</item>
+        <item>\@LilyAldridge</item>
+        <item>\@KateUpton</item>
+        <item>\@GiGiHadid</item>
+        <item>\@michkeegan</item>
+        <item>\@_KatherineWebb</item>
+        <item>\@ScarlettJ</item>
+        <item>\@katharinemcphee</item>
+        <item>\@LucyPinder</item>
+        <item>\@MirandaKerr</item>
+    </array>
+
+    <array name="avatar_urls">
+        <item>http://images-cdn.moviepilot.com/image/upload/v1426594796/megan-fox-pictures-megan-fox-is-so-tired-of-being-an-actress-and-a-mom-jpeg-86591.jpg</item>
+        <item>http://itsybitsysteps.com/wp-content/uploads/2013/10/olivia-wilde.jpg</item>
+        <item>http://img4.wikia.nocookie.net/__cb20120224061953/xmenmovies/images/c/cf/Jennifer-Lawrence.jpg</item>
+        <item>http://cdn.modernfarmer.com/wp-content/uploads/2014/10/Jessica-Alba-3.jpg</item>
+        <item>http://2.bp.blogspot.com/-KKccgaeEuzo/U72z9iDdJTI/AAAAAAAAAJ0/ikXRojD29nA/s1600/leighton-meester.png</item>
+        <item>http://assets-s3.usmagazine.com/uploads/assets/celebrities/5570-hayden-panettiere/1351182452_hayden-panettiere-290.jpg</item>
+        <item>https://s-media-cache-ak0.pinimg.com/originals/0b/b3/70/0bb3704734e0a535ec846772f7d28be7.jpg</item>
+        <item>http://www.eventienonsolo.it/wp-content/uploads/2012/05/Aida_Yespica.jpg</item>
+        <item>http://i1.top.de/024/201024,pd_1/adriana-lima.jpg</item>
+        <item>http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2015/10/102815-alessandra-ambrosio-lead.jpg?itok=uRVvt-Ne</item>
+        <item>http://images.askmen.com/candice-swanepoel/picture-1-135249430024.jpg</item>
+        <item>http://www3.pictures.zimbio.com/bg/Jessica+Gomes+JEHStjT_sgtm.jpg</item>
+        <item>http://www.celebzz.com/wp-content/uploads/2014/01/genevieve-morton-at-2013-sports-illustrated-swimsuit-launch-party-_1.jpg</item>
+        <item>http://www.theplace2.ru/archive/petra_nemcova/img/petra-nemcova-1920x1200-27155.jpg</item>
+        <item>http://i.perezhilton.com/wp-content/uploads/2014/03/lily-aldridge.gif</item>
+        <item>http://i.huffpost.com/gen/1245823/thumbs/o-KATE-UPTON-facebook.jpg</item>
+        <item>http://fullhdpictures.com/wp-content/uploads/2016/04/Gigi-Hadid-HD-Photos.jpg</item>
+        <item>http://i1.cdnds.net/13/25/300x450/showbiz-michelle-keegan.jpg</item>
+        <item>http://www.rantsports.com/clubhouse/files/2014/03/10-instagram.jpg</item>
+        <item>http://si.wsj.net/public/resources/images/BN-BY925_mag041_OZ_20140318165119.jpg</item>
+        <item>http://img2.timeinc.net/people/i/2008/database/katherinemcphee/katmcphee300.jpg</item>
+        <item>http://thefinereport.com/wp-content/uploads/2012/05/459090-lucy_pinder_nuts_magazine_18_03_2011_in_nuts_office_with_nutsmanreg_3_3063.jpg</item>
+        <item>http://greenorganics.com.au/organic-natural-skin-care-products/wp-content/images/miranda-kerr-skin-care-secrets.jpg</item>
+    </array>
+</resources>
