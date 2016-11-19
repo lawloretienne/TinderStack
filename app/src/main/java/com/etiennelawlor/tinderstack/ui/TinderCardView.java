@@ -23,7 +23,7 @@ import com.squareup.picasso.Picasso;
  * Created by etiennelawlor on 11/17/16.
  */
 
-public class TinderCard extends FrameLayout implements View.OnTouchListener {
+public class TinderCardView extends FrameLayout implements View.OnTouchListener {
 
     // region Constants
     private static final float CARD_ROTATION_DEGREES = 45.0f;
@@ -53,17 +53,17 @@ public class TinderCard extends FrameLayout implements View.OnTouchListener {
     // endregion
 
     // region Constructors
-    public TinderCard(Context context) {
+    public TinderCardView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public TinderCard(Context context, AttributeSet attrs) {
+    public TinderCardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public TinderCard(Context context, AttributeSet attrs, int defStyle) {
+    public TinderCardView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs);
     }
@@ -73,7 +73,7 @@ public class TinderCard extends FrameLayout implements View.OnTouchListener {
     @Override
     public boolean onTouch(final View view, MotionEvent motionEvent) {
         TinderStackLayout tinderStackLayout = ((TinderStackLayout)view.getParent());
-        TinderCard topCard = (TinderCard) tinderStackLayout.getChildAt(tinderStackLayout.getChildCount()-1);
+        TinderCardView topCard = (TinderCardView) tinderStackLayout.getChildAt(tinderStackLayout.getChildCount()-1);
         if(topCard.equals(view)){
             switch(motionEvent.getAction()){
                 case MotionEvent.ACTION_DOWN:
@@ -145,7 +145,7 @@ public class TinderCard extends FrameLayout implements View.OnTouchListener {
             screenWidth = DisplayUtility.getScreenWidth(context);
             leftBoundary =  screenWidth * (1.0f/6.0f); // Left 1/6 of screen
             rightBoundary = screenWidth * (5.0f/6.0f); // Right 1/6 of screen
-            padding = DisplayUtility.dp2px(context, 8);
+            padding = DisplayUtility.dp2px(context, 16);
 
             setOnTouchListener(this);
         }

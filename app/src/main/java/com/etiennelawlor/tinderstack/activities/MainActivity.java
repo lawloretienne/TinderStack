@@ -2,22 +2,11 @@ package com.etiennelawlor.tinderstack.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 
 import com.etiennelawlor.tinderstack.R;
 import com.etiennelawlor.tinderstack.models.User;
-import com.etiennelawlor.tinderstack.ui.TinderCard;
+import com.etiennelawlor.tinderstack.ui.TinderCardView;
 import com.etiennelawlor.tinderstack.ui.TinderStackLayout;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -47,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         tinderStackLayout = (TinderStackLayout) findViewById(R.id.tsl);
 
-        TinderCard tc;
+        TinderCardView tc;
         for(int i=index; index<i+STACK_SIZE; index++){
-            tc = new TinderCard(this);
+            tc = new TinderCardView(this);
             tc.bind(getUser(index));
             tinderStackLayout.addCard(tc);
         }
@@ -70,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onNext(Integer integer) {
                         if(integer == 1){
-                            TinderCard tc;
+                            TinderCardView tc;
                             for(int i=index; index<i+(STACK_SIZE-1); index++){
-                                tc = new TinderCard(MainActivity.this);
+                                tc = new TinderCardView(MainActivity.this);
                                 tc.bind(getUser(index));
                                 tinderStackLayout.addCard(tc);
                             }

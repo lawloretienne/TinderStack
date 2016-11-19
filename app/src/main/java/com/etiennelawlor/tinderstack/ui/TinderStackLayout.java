@@ -31,7 +31,7 @@ public class TinderStackLayout extends FrameLayout {
     private PublishSubject<Integer> publishSubject = PublishSubject.create();
     private CompositeSubscription compositeSubscription;
     private int screenWidth;
-    private int padding;
+    private int yMultiplier;
     // endregion
 
     // region Constructors
@@ -76,7 +76,7 @@ public class TinderStackLayout extends FrameLayout {
         setClipChildren(false);
 
         screenWidth = DisplayUtility.getScreenWidth(getContext());
-        padding = DisplayUtility.dp2px(getContext(), 8);
+        yMultiplier = DisplayUtility.dp2px(getContext(), 8);
 
         compositeSubscription = new CompositeSubscription();
 
@@ -98,16 +98,15 @@ public class TinderStackLayout extends FrameLayout {
 
                             int childCount = getChildCount();
                             for(int i=childCount-2; i>=0; i--){
-                                TinderCard tinderCard = (TinderCard) getChildAt(i);
+                                TinderCardView tinderCardView = (TinderCardView) getChildAt(i);
 
-                                if(tinderCard != null){
+                                if(tinderCardView != null){
                                     if(Math.abs(posX) == (float)screenWidth){
-                                        int yMultiplier = childCount-2-i;
                                         float scaleValue = 1 - ((childCount-2-i)/50.0f);
 
-                                        tinderCard.animate()
+                                        tinderCardView.animate()
                                             .x(0)
-                                            .y(padding * yMultiplier)
+                                            .y((childCount-2-i) * yMultiplier)
                                             .scaleX(scaleValue)
                                             .rotation(0)
                                             .setInterpolator(new AccelerateDecelerateInterpolator())
@@ -130,8 +129,8 @@ public class TinderStackLayout extends FrameLayout {
         return publishSubject;
     }
 
-    public void addCard(TinderCard tc){
-        ViewGroup.LayoutParams layoutParams; layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+    public void addCard(TinderCardView tc){
+        ViewGroup.LayoutParams layoutParams; layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         int childCount = getChildCount();
         addView(tc, 0, layoutParams);
@@ -140,7 +139,7 @@ public class TinderStackLayout extends FrameLayout {
 
         tc.animate()
             .x(0)
-            .y(childCount*padding)
+            .y(childCount * yMultiplier)
             .scaleX(scaleValue)
             .setInterpolator(new AccelerateDecelerateInterpolator())
             .setDuration(DURATION);

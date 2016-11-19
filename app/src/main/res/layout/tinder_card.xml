@@ -5,12 +5,12 @@
     style="@style/CardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="16dp"
     android:layout_gravity="top">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <FrameLayout
             android:layout_width="match_parent"
