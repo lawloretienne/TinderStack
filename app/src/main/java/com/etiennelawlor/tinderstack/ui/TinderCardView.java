@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -111,7 +112,7 @@ public class TinderCardView extends FrameLayout implements View.OnTouchListener 
                     view.setX(view.getX() + dX);
                     view.setY(view.getY() + dY);
 
-                    setCardRotation(view, posX);
+                    setCardRotation(view, view.getX());
 
                     updateAlphaOfBadges(posX);
                     return true;
@@ -206,8 +207,8 @@ public class TinderCardView extends FrameLayout implements View.OnTouchListener 
         nopeTextView.setAlpha(0);
     }
 
-    private void setCardRotation(View view, float posX){  // TODO issue with rotation. Rotates too quickly
-        float rotation = (CARD_ROTATION_DEGREES * (posX - padding)) / screenWidth;
+    private void setCardRotation(View view, float posX){
+        float rotation = (CARD_ROTATION_DEGREES * (posX)) / screenWidth;
         int halfCardHeight = (view.getHeight() / 2);
         if(oldY < halfCardHeight - (2*padding)){
             view.setRotation(rotation);
