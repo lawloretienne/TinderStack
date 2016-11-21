@@ -7,7 +7,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,7 +27,7 @@ import com.squareup.picasso.Picasso;
 public class TinderCardView extends FrameLayout implements View.OnTouchListener {
 
     // region Constants
-    private static final float CARD_ROTATION_DEGREES = 45.0f;
+    private static final float CARD_ROTATION_DEGREES = 40.0f;
     private static final float BADGE_ROTATION_DEGREES = 15.0f;
     private static final int DURATION = 300;
     // endregion
@@ -165,7 +166,7 @@ public class TinderCardView extends FrameLayout implements View.OnTouchListener 
         view.animate()
                 .x(xPos)
                 .y(0)
-                .setInterpolator(new AccelerateDecelerateInterpolator())
+                .setInterpolator(new AccelerateInterpolator())
                 .setDuration(DURATION)
                 .setListener(new Animator.AnimatorListener() {
                     @Override
@@ -198,14 +199,14 @@ public class TinderCardView extends FrameLayout implements View.OnTouchListener 
                 .x(0)
                 .y(0)
                 .rotation(0)
-                .setInterpolator(new AccelerateDecelerateInterpolator())
+                .setInterpolator(new OvershootInterpolator())
                 .setDuration(DURATION);
 
         likeTextView.setAlpha(0);
         nopeTextView.setAlpha(0);
     }
 
-    private void setCardRotation(View view, float posX){
+    private void setCardRotation(View view, float posX){  // TODO issue with rotation. Rotates too quickly
         float rotation = (CARD_ROTATION_DEGREES * (posX - padding)) / screenWidth;
         int halfCardHeight = (view.getHeight() / 2);
         if(oldY < halfCardHeight - (2*padding)){

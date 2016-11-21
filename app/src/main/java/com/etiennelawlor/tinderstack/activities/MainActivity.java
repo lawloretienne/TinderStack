@@ -17,8 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private static final int STACK_SIZE = 4;
     // endregion
 
-    // region Member Variables
+    // region Views
     private TinderStackLayout tinderStackLayout;
+    // endregion
+
+    // region Member Variables
     private String[] displayNames, userNames, avatarUrls;
     private int index = 0;
     // endregion

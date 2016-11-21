@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.FrameLayout;
 
 import com.etiennelawlor.tinderstack.bus.RxBus;
@@ -109,7 +109,7 @@ public class TinderStackLayout extends FrameLayout {
                                             .y((childCount-2-i) * yMultiplier)
                                             .scaleX(scaleValue)
                                             .rotation(0)
-                                            .setInterpolator(new AccelerateDecelerateInterpolator())
+                                            .setInterpolator(new AnticipateOvershootInterpolator())
                                             .setDuration(DURATION);
                                     } else {
 //                                        float multiplier =  (DisplayUtility.dp2px(getContext(), 8)) / (float)screenWidth;
@@ -141,7 +141,7 @@ public class TinderStackLayout extends FrameLayout {
             .x(0)
             .y(childCount * yMultiplier)
             .scaleX(scaleValue)
-            .setInterpolator(new AccelerateDecelerateInterpolator())
+            .setInterpolator(new AnticipateOvershootInterpolator())
             .setDuration(DURATION);
     }
     // endregion

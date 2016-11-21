@@ -11,4 +11,9 @@
 
     <color name="fifty_percent_transparency_grey_400">#80bdbdbd</color>
 
+    <color name="light_green">#53DAB1</color>
+    <color name="light_red">#F85068</color>
+
+
+
 </resources>
