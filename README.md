@@ -1,5 +1,5 @@
 # TinderStack
 A stack of cards similar to Tinder
 
-![TinderStack](videos/TinderStack_Screencast.gif)
+![TinderStack](images/TinderStack_Screencast3.gif)
 
