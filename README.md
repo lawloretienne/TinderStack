@@ -4,7 +4,7 @@
 
 ## Overview
 
-A stack of cards similar to Tinder
+A stack of cards similar to Tinder. You can swipe the cards left or right.
 
 ## Screencast
 
